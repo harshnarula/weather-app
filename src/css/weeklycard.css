@@ -1,0 +1,47 @@
+.week{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #072b91;
+    width: 100vw;
+    height: 200px;
+    flex-direction: row;
+}
+.week-forecast-header-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100vw;
+    height: 54px;
+    color: #072b91;
+    background-color: #ffffff47;
+    backdrop-filter: blur(10px);
+}
+.week-forecast-header{
+    font-size: 32px;
+}
+.week-card{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: #80808047;
+    backdrop-filter: blur(10px);
+    margin: 10px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.week-icon{
+    display: flex;
+    font-size: 30px;
+}
+.week-weather{
+    font-size: 20px;
+    margin-top: -11px;
+}
+.week-day{
+    font-size: 15px;
+}

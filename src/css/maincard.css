@@ -1,0 +1,125 @@
+.maincard{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #072b91;
+    width: 100vw;
+    height: 240px;
+    flex-direction: row;
+}
+.city-details{
+    display: flex;
+    justify-content: flex-start;
+    width: 240px;
+    height: auto;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #80808047;
+    backdrop-filter: blur(10px);
+}
+.city{
+    font-size: 30px;
+    margin: 5px 0px;
+    text-indent: 5px;
+}
+.date{
+    font-size: 15px;
+    margin: 2px 0px;
+    text-indent: 5px;
+}
+.city-weather-forecast{
+    display: flex;
+    justify-content: space-evenly;
+    width: 350px;
+    height: 225px;
+    background-color: #80808047;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.city-weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+}
+.city-weather-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.weather-main-align{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.weather-img-box{
+    display: flex;
+    font-size: 50px;
+}
+
+.weather-name{
+    font-size: 25px;
+    margin-bottom: 11px;
+}
+.city-temp{
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+
+}
+.city-weather-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.air-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 100px;
+}
+.air-prob{
+    font-size: 20px;
+    text-indent: 5px;
+}
+.wind-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 100px;
+}
+.wind-prob{
+    font-size: 20px;
+    text-indent: 5px;
+}
+.pressure-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 100px;
+}
+.pressure-prob{
+    font-size: 20px;
+}
+.visibility{
+    display: flex;
+    background-color: #80808047;
+    backdrop-filter: blur(10px);
+    color: #072b91;
+    height: 70px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.visibility-value{
+    font-size: 25px;
+}

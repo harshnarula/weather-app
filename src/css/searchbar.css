@@ -1,0 +1,26 @@
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 30px;
+    background-color: #80808047;
+}
+
+.search-city{
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+}
+.search-city ::placeholder{
+    margin-left: 25px;
+}
+.search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 25px;
+    background-color: #80808047;
+    color: #072b91;
+}
