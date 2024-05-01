@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import '../css/searchbar.css';
 import axios from 'axios';
-
+// cb99a3d3cde4925fc26faf0168189024
 export default function Searchbar({ city, setCity, setWeatherData }) {
   const [error, setError] = useState(null);
+  // const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
+  const apiKey = 'cb99a3d3cde4925fc26faf0168189024';
 
   const handleSearch = async () => {
     try {   
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=cb99a3d3cde4925fc26faf0168189024&units=metric`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       );
 
       const weatherData = response.data;
