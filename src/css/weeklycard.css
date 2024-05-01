@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: #072b91;
     width: 100vw;
     height: 200px;
@@ -44,4 +43,17 @@
 }
 .week-day{
     font-size: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .week {
+        flex-direction: column;
+        height: auto; /* Let the height be determined by content */
+        align-items: center;
+    }
+
+    .week-card {
+        width: 80%; /* Adjust width to fit the screen */
+        margin: 10px 0; /* Remove horizontal margin */
+    }
 }

@@ -1,12 +1,9 @@
-import React from 'react';
- // billa: removed unused imports
+import React from 'react'
 import '../css/fullday.css'
 import WeatherIcon from './WeatherIcon';
 
 export default function FullDayCard({weatherData}){
     const data = []
-// billa: remove unused variables
- // nextdate - use camelCase
     let count = 0
     let counter = 0
     let time = ''
@@ -24,8 +21,6 @@ export default function FullDayCard({weatherData}){
         else if(data === 21){
             ts = data - 12
         }
-        
-        // console.log(ts)
         return ts
     }
 
@@ -33,39 +28,22 @@ export default function FullDayCard({weatherData}){
         return;
    }
    else{
-        const fulldayData = weatherData.list // billa: again violation of camelCase rule
-        // console.log(fulldayData)
-        // billa: can use fulldayData.map() instead of this while loop (all this code will come in 1 single line with .map())
+        const fulldayData = weatherData.list 
+       
         while(counter <= 0){
         for(let i = 0; i <= fulldayData.length - 1; i++){
-            // date = fulldayData[i].dt_txt.split(" ")
-            // console.log(date)
+
             if(count < 9){
                         data.push(fulldayData[i].dt_txt)
                         count++;
                     }
             
-        
-           
-            // for(let j = i+1; j <= fulldayData.length - 1; j++){
-            //     nextdate = fulldayData[j].dt_txt.split(" ")
-            //     // console.log(nextdate)
-                
-            //     if(count < 7){
-            //         data.push(fulldayData[j-1].dt_txt)
-            //         count++;
-            //     }
-                
-            // }
-                
+     
             }
         counter++;
             
         }
         console.log(data)
-
-        
-
    }
    let timeShifter = (hour) => {
     // if (hour % 3 === 0 && hour >= 12) {
@@ -102,15 +80,6 @@ export default function FullDayCard({weatherData}){
             return hour
         }
     }
- 
-//    hour[0] % 3 === 0 && hour[0] >= 12 
-//         ? hour === '00:00:00' && hour !== "12:00:00" ? ' am': ' pm' 
-//         : ' am'
-
-// hour[0] >= 15 
-// ? time_change(hour[0])  
-//     : hour[0] === '00' ? hour[0] = '12' : hour[0]}
-    // billa: even below you have used for loop for looping through jsx, use .map()
     return(
     <>
         <div className= 'day-forecast-header-box'>
