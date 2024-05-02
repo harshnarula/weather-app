@@ -8,13 +8,14 @@ import { getBackgroundStyle } from "../components/utils";
 import axios from "axios";
 
 export default function Weather() {
-    const [city, setCity] = useState('');
+    const [city, setCity] = useState('Mumbai'); 
     const [weatherData, setWeatherData] = useState(null);
     const [backgroundStyle, setBackgroundStyle] = useState({});
     
     let apiKey = import.meta.env.VITE_API_KEY;
 
     useEffect(() => {
+
         const fetchWeatherData = async () => {
             try {
                 const response = await axios.get(
@@ -29,13 +30,12 @@ export default function Weather() {
             }
         };
 
-        // Fetch weather data only if the city is provided
-        if (city) {
-            fetchWeatherData();
-        }
-    }, [city, apiKey]); // Include apiKey in the dependency array
+
+        fetchWeatherData();
+    }, [city, apiKey]); 
 
     useEffect(() => {
+
         if (weatherData) {
             const weatherCondition = weatherData.list[0].weather[0].main.toLowerCase();
             setBackgroundStyle(getBackgroundStyle(weatherCondition));
