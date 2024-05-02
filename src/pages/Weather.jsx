@@ -12,11 +12,13 @@ export default function Weather() {
     const [weatherData, setWeatherData] = useState(null);
     const [backgroundStyle, setBackgroundStyle] = useState({});
 
+    const key = process.env.REACT_APP_API_KEY
+
     useEffect(() => {
         const fetchWeatherData = async () => {
             try {
                 const response = await axios.get(
-                    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
+                    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`
                 );
                 const weatherData = response.data;
                 if (weatherData.list && weatherData.list.length > 0) {
