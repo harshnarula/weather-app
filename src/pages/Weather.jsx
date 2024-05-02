@@ -11,14 +11,14 @@ export default function Weather() {
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState(null);
     const [backgroundStyle, setBackgroundStyle] = useState({});
-
-    const key = process.env.REACT_APP_API_KEY
+    
+    let apiKey = import.meta.env.VITE_API_KEY;
 
     useEffect(() => {
         const fetchWeatherData = async () => {
             try {
                 const response = await axios.get(
-                    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`
+                    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
                 );
                 const weatherData = response.data;
                 if (weatherData.list && weatherData.list.length > 0) {
@@ -33,7 +33,7 @@ export default function Weather() {
         if (city) {
             fetchWeatherData();
         }
-    }, [city]);
+    }, [city, apiKey]); // Include apiKey in the dependency array
 
     useEffect(() => {
         if (weatherData) {

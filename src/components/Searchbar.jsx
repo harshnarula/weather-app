@@ -4,11 +4,12 @@ import axios from 'axios';
 
 export default function Searchbar({ city, setCity, setWeatherData }) {
   const [error, setError] = useState(null);
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   const handleSearch = async () => {
     try {   
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       );
 
       const weatherData = response.data;
