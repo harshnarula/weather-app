@@ -32,7 +32,7 @@ export default function Weather() {
 
 
         fetchWeatherData();
-    }, [city, apiKey]); 
+    }, []); 
 
     useEffect(() => {
 

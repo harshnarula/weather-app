@@ -27,6 +27,12 @@ export default function Searchbar({ city, setCity, setWeatherData }) {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div className='searchbar'>
       <input
@@ -35,8 +41,9 @@ export default function Searchbar({ city, setCity, setWeatherData }) {
         className="search-city"
         value={city}
         onChange={(e) => setCity(e.target.value)}
+        onKeyDown={handleKeyPress}
       />
-      <button onClick={handleSearch} className = 'search-btn'>Search</button>
+      <button onClick={handleSearch} className='search-btn'>Search</button>
       {error && <div className="error-message">{error}</div>}
     </div>
   );
